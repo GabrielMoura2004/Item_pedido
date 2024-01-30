@@ -1,0 +1,30 @@
+@model List<ItemPedido>
+
+    <h2>Listagem dos ItensPedidos Cadastrados</h2>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Quantidade</th>
+                <th>ValorUnitario </th>
+                <th> Descricao </th>
+
+                
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (ItemPedido a in Model)
+            {
+                
+            
+            <tr>
+             <td>@a.Quantidade</td>
+             <td>@a.ValorUnitario</td>
+             <td>@a.Descricao</td>
+            
+            </tr>
+            }
+        </tbody>
+    </table>
+     
+    <a asp-action="Cadastro">Cadastrar novo pedido</a>
